@@ -2,7 +2,7 @@ Ejercicio Next.js
 Este es mi ejercicio realizado en Next.js.
 ejercicio-next.js
 
-codigo sugerio para el ejercico rempazar el archivo page.tsx por este
+codigo sugerio para el ejercico rempazar el archivo src/app/page.tsx por este
 
 "use client";
 
