@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Ejercicio Next.js
+Este es mi ejercicio realizado en Next.js.
+ejercicio-next.js
 
-## Getting Started
+codigo sugerio para el ejercico rempazar el archivo page.tsx por este
 
-First, run the development server:
+"use client";
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+import { useState } from "react";
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+export default function Inicio() {
+  // Estado para guardar la tarea que se está escribiendo
+  const [tarea, setTarea] = useState(____);
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+  // Lista inicial de tareas
+  const [tareas, setTareas] = useState([
+    "Estudiar Next.js",
+    "Realizar el ejercicio",
+    "Practicar programación",
+  ]);
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  function agregarTarea() {
+    // Verificar que la tarea no esté vacía
+    if (________) {
+      // Agregar la nueva tarea a la lista
+      setTareas(__________);
 
-## Learn More
+      // Limpiar el input después de agregar
+      setTarea(____);
+    }
+  }
 
-To learn more about Next.js, take a look at the following resources:
+  return (
+    <main>
+      <h1>Mis tareas</h1>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+      <div className="formulario">
+        <input
+          type="text"
+          placeholder="Escribe una tarea"
+          value={____}
+          onChange={(e) => ________}
+        />
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+        <button onClick={______}>
+          Agregar
+        </button>
+      </div>
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+      <ul>
+        {tareas.____((tarea, index) => (
+          <li key={___}>{___}</li>
+        ))}
+      </ul>
+    </main>
+  );
+}
